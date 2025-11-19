@@ -5,7 +5,7 @@ export default function SwitcherThemes(){
  const {setTheme, theme} = useTheme()
   return <div className='max-w-max flex flex-row border border-neutral-300 dark:border-neutral-700 rounded-full p-1.25 gap-1.25 bg-neutral-100 dark:bg-neutral-900'>
    {themesData.map((item, index) => {
-     return <button key={index} onClick={()=>setTheme(item.theme)} className='p-2 relative'>
+     return <button key={index} onClick={()=>setTheme(item.theme)} className='p-2 relative cursor-pointer'>
        <span className='relative z-1'>{item.icon}</span>
        {theme===item.theme?
          <motion.span layoutId='switcherThemeBg'
